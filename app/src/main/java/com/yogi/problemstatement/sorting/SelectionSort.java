@@ -11,7 +11,6 @@ public class SelectionSort {
             minValueIndex=i;
 
             for (int j = i+1; j < size; j++) {
-//                System.out.println(" "+array[j] +"  array[minValueIndex]"+array[minValueIndex]);
                 if(array[j]<array[minValueIndex]){
                     minValueIndex=j;
                 }
@@ -33,7 +32,6 @@ return array;
     }
 
     public static void main(String[] args) {
-        System.out.println("thi is test");
         SelectionSort selectionSort = new SelectionSort();
 
         int array[]=new int[]{2,4,3,7,5,6,1};
