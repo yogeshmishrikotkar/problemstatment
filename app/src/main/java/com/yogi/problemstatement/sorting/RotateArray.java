@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 public class RotateArray {
 
+//shift array element to given number of times
 
-
-    ArrayList<Integer> performOps(ArrayList<Integer> A) {
-        ArrayList<Integer> B = new ArrayList<Integer>();
-        for (int i = 0; i < 2 * A.size(); i++) B.add(0);
-        for (int i = 0; i < A.size(); i++) {
-
-            int temp1=(A.size() - i);
-            int size=A.size();
-            int mod=temp1%size;
-
-            System.out.println(mod + " >>> "+(i + A.size()));
-
-            B.set(i, A.get(i));
-            B.set(i + A.size(), A.get((A.size() - i) % A.size()));
-        }
-        return B;
-    }
+//    ArrayList<Integer> performOps(ArrayList<Integer> A) {
+//        ArrayList<Integer> B = new ArrayList<Integer>();
+//        for (int i = 0; i < 2 * A.size(); i++) B.add(0);
+//        for (int i = 0; i < A.size(); i++) {
+//
+//            int temp1=(A.size() - i);
+//            int size=A.size();
+//            int mod=temp1%size;
+//
+//            System.out.println(mod + " >>> "+(i + A.size()));
+//
+//            B.set(i, A.get(i));
+//            B.set(i + A.size(), A.get((A.size() - i) % A.size()));
+//        }
+//        return B;
+//    }
 
 
 
@@ -64,19 +64,19 @@ public class RotateArray {
         }
 
 
-        int input1[]=new int[]{ 5, 10, 2, 1};
-        ArrayList<Integer> f2= new ArrayList<>();
-
-        for (int i = 0; i < input1.length; i++) {
-            f2.add(input1[i]);
-        }
+//        int input1[]=new int[]{ 5, 10, 2, 1};
+//        ArrayList<Integer> f2= new ArrayList<>();
+//
+//        for (int i = 0; i < input1.length; i++) {
+//            f2.add(input1[i]);
+//        }
       //  array.performOps(f2);
 
 
-        ArrayList<Integer> B = array.performOps(f2);
-        for (int i = 0; i < B.size(); i++) {
-            System.out.print(B.get(i) + " ");
-        }
+//        ArrayList<Integer> B = array.performOps(f2);
+//        for (int i = 0; i < B.size(); i++) {
+//            System.out.print(B.get(i) + " ");
+//        }
 
 
     }
