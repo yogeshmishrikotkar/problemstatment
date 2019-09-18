@@ -1,40 +1,101 @@
 package com.yogi.problemstatement.sorting;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
 public class AddingOneDigitToArray {
 
 
     public static void main(String[] args) {
         AddingOneDigitToArray a1= new AddingOneDigitToArray();
 
-        int array[]=new int[]{0,9,9};
-        a1.calculate(array);
+//        int array[]=new int[]{9, 9, 9, 9, 9 };
+        int array[]=new int[]{0, 3, 7, 6, 4, 0, 5, 5, 5 };
+//        int[] calculate = a1.calculate(array);
+
+        int[] calculate = a1.plusOne(array);
+
+
+
+
+        for (int i = 0; i < calculate.length; i++) {
+            System.out.print(""+calculate[i]);
+        }
+
+
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        int array1[]=new int[]{9, 9, 9, 9, 9 };
+
+        int[] calculate1= a1.plusOne(array1);
+
+
+
+
+        for (int i = 0; i < calculate1.length; i++) {
+            System.out.print(""+calculate1[i]);
+        }
+
+
     }
 
-    private void calculate(int[] array) {
-        StringBuilder stringBuilder = new StringBuilder();
+
+
+
+    public int[] plusOne(int[] array)
+    {
+        int n = array.length;//a.size();
+
+//        int resultArray[]=new int[n+1];
+        // Add 1 to last digit and find carry
+        array[n - 1]=array[n - 1] + 1;
+        int carry = array[n - 1] / 10;
+        array[n - 1]= array[n - 1 ]% 10;
+
+        // Traverse from second last digit
+        for (int i = n - 2; i >= 0; i--)
+        {
+            if (carry == 1)
+            {
+                array[i]=array[i]+1;
+                carry =  array[i] / 10;
+                array[i]= array[i] % 10;
+            }
+        }
+
+
+        if(carry==1){
+            int[] resarr = new int[array.length+1];
+            resarr[0]=carry;
+            for (int i = array.length-1; i >0;i--) {
+                resarr[i]=array[i];
+            }
+            return  resarr;
+        }
+
+
+
+        // this is improtant logic to remove all leading zero in front
+
+        int counter = 0;
         for (int i = 0; i < array.length; i++) {
-            stringBuilder.append(array[i]);
+            if (array[i] != 0) {
+                break;
+            }
+            counter++;
         }
-        int number = Integer.parseInt(stringBuilder.toString())+1;
-//       System.out.println(" numuber is "+number);
 
-        int newArray[] =new int[(""+number).length()];
+        int[] resarr = new int[array.length-counter];
 
-
-        int index=newArray.length-1;
-
-        while (index>=0){
-            int tempNumber =number%10;
-            number=number/10;
-            newArray[index]=tempNumber;
-//              System.out.println(" numuber is array[i] "+newArray[index]+" "+index);
-            index=index-1;
-
+        for (int i = 0; i< array.length-counter; i++) {
+            resarr[i]=array[i+counter];
         }
 
 
 
+        return resarr;
     }
+
 
 
 }
