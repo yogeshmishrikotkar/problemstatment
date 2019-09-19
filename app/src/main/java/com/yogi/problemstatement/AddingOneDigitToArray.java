@@ -1,8 +1,5 @@
-package com.yogi.problemstatement.sorting;
+package com.yogi.problemstatement;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
 //
 //
 //Given a non-negative number represented as an array of digits,

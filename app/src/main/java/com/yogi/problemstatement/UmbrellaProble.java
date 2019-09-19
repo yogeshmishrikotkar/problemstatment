@@ -1,4 +1,4 @@
-package com.yogi.problemstatement.sorting;
+package com.yogi.problemstatement;
 
 import java.util.ArrayList;
 import java.util.Collections;

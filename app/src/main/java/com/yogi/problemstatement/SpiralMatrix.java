@@ -1,4 +1,4 @@
-package com.yogi.problemstatement.sorting;
+package com.yogi.problemstatement;
 //
 //Given a matrix of m * n elements (m rows, n columns), return all elements of the matrix in spiral order.
 //

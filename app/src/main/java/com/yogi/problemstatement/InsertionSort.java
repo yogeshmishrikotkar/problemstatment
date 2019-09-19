@@ -1,4 +1,4 @@
-package com.yogi.problemstatement.sorting;
+package com.yogi.problemstatement;
 
 public class InsertionSort {
 
