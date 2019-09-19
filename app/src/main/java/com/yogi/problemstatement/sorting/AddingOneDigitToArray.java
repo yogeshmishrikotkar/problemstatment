@@ -3,40 +3,37 @@ package com.yogi.problemstatement.sorting;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
-
+//
+//
+//Given a non-negative number represented as an array of digits,
+//
+//        add 1 to the number ( increment the number represented by the digits ).
+//
+//        The digits are stored such that the most significant digit is at the head of the list.
+//
+//        Example:
+//
+//        If the vector has [1, 2, 3]
+//
+//        the returned vector should be [1, 2, 4]
+//
+//        as 123 + 1 = 124.
 public class AddingOneDigitToArray {
 
 
     public static void main(String[] args) {
         AddingOneDigitToArray a1= new AddingOneDigitToArray();
-
-//        int array[]=new int[]{9, 9, 9, 9, 9 };
         int array[]=new int[]{0, 3, 7, 6, 4, 0, 5, 5, 5 };
-//        int[] calculate = a1.calculate(array);
-
         int[] calculate = a1.plusOne(array);
-
-
-
-
         for (int i = 0; i < calculate.length; i++) {
             System.out.print(""+calculate[i]);
         }
-
-
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         int array1[]=new int[]{9, 9, 9, 9, 9 };
-
         int[] calculate1= a1.plusOne(array1);
-
-
-
-
         for (int i = 0; i < calculate1.length; i++) {
             System.out.print(""+calculate1[i]);
         }
-
-
     }
 
 
